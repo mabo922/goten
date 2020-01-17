@@ -1,4 +1,8 @@
 # app.rb
+
+
+
+
 require 'sinatra'
 require 'line/bot'
 require 'dotenv/load'
