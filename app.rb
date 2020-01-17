@@ -1,11 +1,12 @@
+# app.rb
 require 'sinatra'
 require 'line/bot'
 require 'dotenv/load'
 
 def client
   @client ||= Line::Bot::Client.new { |config|
-    config.channel_secret = ENV["a2b4e4249814899de6fe35ae79112b5a"]
-    config.channel_token = ENV["ehdAt+dztB2FXRggg7uqxu6KVSRsdABUGnWXOwqSDVD5sNlMEDDw0ceohVqkMOd4iMuigP6i+v86mYDOw9iPzTJV7teZ1dnPHQeLdtnuZYjequTg4VM7R9WBtHk/J63JeUvgbzEBzIm77nGGJcZuOQdB04t89/1O/w1cDnyilFU="]
+    config.channel_secret = ENV["LINE_CHANNEL_SECRET"]
+    config.channel_token = ENV["LINE_CHANNEL_TOKEN"]
   }
 end
 
