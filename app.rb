@@ -41,3 +41,7 @@ post '/callback' do
 
   "OK"
 end
+
+get '/' do
+  erb :index
+end
