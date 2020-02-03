@@ -4,6 +4,7 @@
 require 'sinatra'
 require 'line/bot'
 require 'dotenv/load'
+require 'sinatra/activerecord'
 
 def client
   @client ||= Line::Bot::Client.new { |config|
@@ -45,6 +46,3 @@ end
 get '/' do
   erb :index
 end
-
-ActiveRecord::Base.establish_connection(
-  ENV['DATABASE_URL'] )
