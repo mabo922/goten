@@ -45,3 +45,6 @@ end
 get '/' do
   erb :index
 end
+
+ActiveRecord::Base.establish_connection(
+  ENV['DATABASE_URL'] )
